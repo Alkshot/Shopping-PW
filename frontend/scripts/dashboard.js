@@ -51,10 +51,8 @@ spanName.textContent = type;
 h3.textContent = name;
 
 fatherDiv.addEventListener("click", ()=>{
-let currentyUser = stores.findIndex(storetodel => storetodel.id == store.id)
-localStorage.setItem("storeID", currentyUser)
+localStorage.setItem("storeID", JSON.stringify(store))
 window.location.href = "store.html";
-
 })
 
 div.append(spanName, h3);
